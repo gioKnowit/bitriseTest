@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SpeakIt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="99s-y2-fbf">
+                                <rect key="frame" x="15" y="20" width="345" height="130"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="bi9-XM-NeR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7yO-H1-t1X">
+                                <rect key="frame" x="120" y="165" width="135" height="30"/>
+                                <color key="backgroundColor" red="0.90196078430000004" green="0.12549019610000001" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                <inset key="titleEdgeInsets" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                <state key="normal" title="YOU SHALL SPEAK!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="speakBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fQ2-Qz-3ku"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.20000000000000001" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="hYR-gm-qGF">
+                                <rect key="frame" x="33" y="275" width="309" height="31"/>
+                            </slider>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R1w-7X-hsV">
+                                <rect key="frame" x="0.0" y="313" width="375" height="216"/>
+                            </pickerView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.5" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="sjD-l8-M7m">
+                                <rect key="frame" x="33" y="220" width="309" height="31"/>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sjD-l8-M7m" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="2tX-Dh-15N"/>
+                            <constraint firstItem="99s-y2-fbf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="3YT-UV-eVO"/>
+                            <constraint firstItem="R1w-7X-hsV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6Ju-7N-rZf"/>
+                            <constraint firstItem="R1w-7X-hsV" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="6Zk-bq-Ait"/>
+                            <constraint firstItem="sjD-l8-M7m" firstAttribute="leading" secondItem="hYR-gm-qGF" secondAttribute="leading" id="D81-yo-EOc"/>
+                            <constraint firstItem="sjD-l8-M7m" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dwi-LO-Twx"/>
+                            <constraint firstItem="7yO-H1-t1X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JqD-ED-Eag"/>
+                            <constraint firstItem="R1w-7X-hsV" firstAttribute="top" secondItem="hYR-gm-qGF" secondAttribute="bottom" constant="8" id="KrH-zz-iNh"/>
+                            <constraint firstItem="hYR-gm-qGF" firstAttribute="top" secondItem="sjD-l8-M7m" secondAttribute="bottom" constant="25" id="TMK-w9-vN5"/>
+                            <constraint firstItem="sjD-l8-M7m" firstAttribute="top" secondItem="7yO-H1-t1X" secondAttribute="bottom" constant="25" id="Ybs-w3-V69"/>
+                            <constraint firstItem="99s-y2-fbf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="YhL-UR-nKB"/>
+                            <constraint firstItem="hYR-gm-qGF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Yqx-lk-AMQ"/>
+                            <constraint firstItem="7yO-H1-t1X" firstAttribute="top" secondItem="99s-y2-fbf" secondAttribute="bottom" constant="15" id="no1-3e-rIS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="99s-y2-fbf" secondAttribute="trailing" constant="15" id="umF-ZD-Suc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="languagePicker" destination="R1w-7X-hsV" id="UUJ-cJ-tek"/>
+                        <outlet property="pitchSlider" destination="sjD-l8-M7m" id="2lb-i0-78X"/>
+                        <outlet property="speakTxt" destination="99s-y2-fbf" id="XhR-GU-NR5"/>
+                        <outlet property="speedSlider" destination="hYR-gm-qGF" id="DkT-TE-cm8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
